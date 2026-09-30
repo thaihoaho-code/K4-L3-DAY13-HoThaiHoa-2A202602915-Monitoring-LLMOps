@@ -27,6 +27,9 @@ class RecordingLangfuseClient:
     def update_current_span(self, **kwargs) -> None:
         self.span_updates.append(kwargs)
 
+    def update_current_generation(self, **kwargs) -> None:
+        self.span_updates.append(kwargs)
+
 
 def test_agent_records_prompt_version_with_v4_observation_api(monkeypatch) -> None:
     monkeypatch.setenv("LANGFUSE_PROMPT_NAME", "day13-chat")
@@ -54,7 +57,7 @@ def test_agent_records_prompt_version_with_v4_observation_api(monkeypatch) -> No
         correlation_id="req-12345678",
     )
 
-    span_update = client.span_updates[-1]
+    span_update = next(u for u in client.span_updates if "metadata" in u)
     assert span_update["metadata"] == {
         "doc_count": 1,
         "query_preview": "Explain traces",

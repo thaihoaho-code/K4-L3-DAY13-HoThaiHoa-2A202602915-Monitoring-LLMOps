@@ -49,7 +49,17 @@ def resolve_prompt(
                 fetch_timeout_seconds=2,
                 max_retries=0,
             )
-            if getattr(managed_prompt, "is_fallback", False):
+            try:
+                if isinstance(managed_prompt, str) or getattr(managed_prompt, "is_fallback", False):
+                    return ResolvedPrompt(
+                        text=text,
+                        name=name,
+                        label=label,
+                        version="local-v1",
+                        source="local-fallback",
+                        fetch_error="LangfuseFallback",
+                    )
+            except AttributeError:
                 return ResolvedPrompt(
                     text=text,
                     name=name,
