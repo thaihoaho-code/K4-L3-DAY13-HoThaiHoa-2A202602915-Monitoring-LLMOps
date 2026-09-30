@@ -37,13 +37,13 @@
 
 | Nội dung | Baseline | Kết quả cuối | Nhận xét |
 |---|---|---|---|
-| `validate_logs.py` | | | |
-| `validate_dashboard.py` | | | |
-| `pytest` | | | |
-| Số traces hợp lệ | | | |
-| Số PII leak | | | |
-| Latency P95 / TTFT P95 | | | |
-| Retrieval success rate | | | |
+| `validate_logs.py` | 30/100 | | |
+| `validate_dashboard.py` | 6/6 | | |
+| `pytest` | 22 passed | | |
+| Số traces hợp lệ | 0 | | |
+| Số PII leak | 0 | | |
+| Latency P95 / TTFT P95 | 1428 ms / 50 ms | | |
+| Retrieval success rate | 100% (10/10) | | |
 
 ## 4. Logging và PII
 
