@@ -8,9 +8,10 @@
 - **MSSV:** 2A202602915
 - **Lớp:** K4-L3B
 - **Repository URL:** https://github.com/thaihoaho-code/K4-L3-DAY13-HoThaiHoa-2A202602915-Monitoring-LLMOps
-- **Commit SHA cuối:**
+- **Commit SHA cuối:** a2735cd47bf555dfbd9eaf7127f40da5a7a33028
 - **Challenge ID:** `rag_slow`
-- **Tên project Langfuse cá nhân:** `day13-k4-l3b-2A202602915`
+- **Tên project Langfuse cá nhân:** `day13-k4-l3b-2A202602915` 
+- (các screenshot em quên đổi tên project, nhưng có thể hiện rõ tên "Hồ Thái Hòa" và gmail cá nhân phía dưới góc trái màn hình)
 
 ## 2. Evidence index
 
